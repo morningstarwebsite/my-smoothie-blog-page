@@ -1,0 +1,58 @@
+<%- include("partials/header.ejs") %>
+<img class="profile" src="images/basics.png" alt="smoothie picture">
+<h1>Beyond the Basics: Discovering Unique Smoothie Bases for Every Mood</h1>
+<p>Here’s a guide to unique fruit-based smoothie blends that explore unconventional bases and cater to every mood, adding depth and richness beyond traditional smoothies.
+</p>
+
+<h2>Creamy Coconut for a Relaxing Tropical Vibe</h2>
+<h3>Base:</h3> <p> Coconut Milk or Coconut Water</p>
+<h3>Why:</h3><p>Coconut milk adds a rich, creamy texture while coconut water keeps it light and hydrating.</p>
+<h3>Recipe Idea:</h3> <p> Blend coconut milk with pineapple, mango, and a hint of banana. Add a handful of spinach for extra nutrients and a scoop of chia seeds for texture and fiber. This smoothie brings beachy vibes and is perfect for unwinding.</p>
+<h2>Spiced Almond for a Cozy, Comforting Smoothie</h2>
+<h3>Base:</h3> <p>Almond Milk with a Dash of Cinnamon</p>
+<h3>Why:</h3> <p>Almond milk is creamy yet low in calories, and the cinnamon adds warmth and a subtle sweetness, making it great for chilly days.</p>
+<h3>Recipe Idea:</h3> <p> Blend almond milk with apples, bananas, and a sprinkle of cinnamon. Add oats for a thicker, almost milkshake-like texture. This is an ideal cozy smoothie when you’re craving comfort.</p>
+<h2>Refreshing Green Tea for an Energizing Kick</h2>
+<h3>Base:</h3> <p>Cold-Brewed Green Tea</p>
+<h3>Why:</h3> <p> Green tea provides a gentle caffeine boost along with antioxidants to kickstart your day.</p>
+<h3>Recipe Idea:</h3> <p> Blend chilled green tea with frozen peaches, strawberries, and a squeeze of lemon. Add a handful of kale or spinach for extra greens. This smoothie is light and refreshing, perfect for a gentle morning pick-me-up.</p>
+<h2>Bright Carrot Juice for a Radiant Glow</h2>
+<h3>Base:</h3> <p>Fresh Carrot Juice</p>
+<h3>Why:</h3> <p>Carrot juice is high in beta-carotene, which benefits skin and overall vitality.</p>
+<h3>Recipe Idea:</h3> <p>Blend carrot juice with mango, pineapple, and a bit of ginger for an extra zing. This vibrant smoothie is designed to make you feel radiant from the inside out.</p>
+<h2> Hydrating Aloe Vera for a Cool and Calming Smoothie</h2>
+<h3>Base:</h3> <p>Aloe Vera Juice</p>
+<h3>Why:</h3> <p>Aloe vera is naturally hydrating and has a calming effect, perfect for days when you need to cool off.</p>
+<h3>Recipe Idea:</h3> <p>Blend aloe vera juice with watermelon, cucumber, and a handful of mint leaves. Add a dash of lime for a citrusy punch. This smoothie is ultra-hydrating and refreshing.</p>
+<h2>Tangy Kefir for Gut Health and a Mood Boost</h2>
+<h3>Base:</h3> <p>Plain Kefir</p>
+<h3>Why:</h3> <p>Kefir adds probiotics, which support gut health and overall mood balance.</p>
+<h3>Recipe Idea:</h3> </p>Blend kefir with blueberries, raspberries, and a drizzle of honey. Add chia seeds for extra fiber. This smoothie is tangy, packed with antioxidants, and great for digestive health.</p>
+<h2>Sweet Beet Juice for an Energizing Boost</h2>
+<h3>Base:</h3> <p>Beet Juice</p>
+<h3>Why:</h3> <p>Beets improve blood flow and stamina, making them perfect for pre-workout or an afternoon pick-me-up.</p>
+<h3>Recipe Idea:</h3> <p>Blend beet juice with strawberries, oranges, and a small piece of ginger for added warmth. This smoothie is sweet and earthy with a vibrant pink color that boosts energy and mood.</p>
+<h2> Crisp Apple Juice for a Fresh, Fall-Inspired Treat</h2>
+<h3>Base:</h3> </p>Fresh Apple Juice</p>
+<h3>Why:</h3> <p>Apple juice adds a natural sweetness and crispness that’s perfect for cozy, fall flavors.</p>
+<h3>Recipe Idea:</h3> <p>Blend apple juice with pear, banana, and a hint of cinnamon. Add a handful of oats or nuts for extra richness. This smoothie tastes like apple pie in a glass and is great for cooler, autumn days.</p>
+
+<p>These unique bases bring variety to your smoothies, keeping your creations flavorful and tailored to fit every mood. Give each blend a try and discover a whole new range of smoothie experiences!
+</p>
+
+<h3>Comments:</h3>
+  <ul>
+    <% Blogs.comments.forEach(comment => { %>
+      <li><%= comment %></li>
+    <% }) %>
+  </ul>
+
+  <h3>Leave a Comment:</h3>
+  <form action="/post/<%= Blogs.id %>/comment" method="POST">
+    <textarea name="comment" rows="4" cols="50" required></textarea><br>
+    <button type="submit">Submit</button>
+  </form>
+
+<a href="/">Back to home</a>
+
+<%- include("partials/footer.ejs") %>

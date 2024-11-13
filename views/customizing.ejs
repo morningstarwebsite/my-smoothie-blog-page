@@ -1,0 +1,56 @@
+<%- include("partials/header.ejs") %>
+<img class="profile" src="images/customizing.png" alt="smoothie picture">
+<h1>Which Smoothie Base is Right for You? A Guide to Customizing Your Blend</h1>
+<P>Here’s a guide to help you choose the perfect smoothie base for your needs and mood. Each base offers unique flavors, textures, and nutritional benefits, from creamy and indulgent to light and refreshing.
+</P>
+<h2> Almond Milk: For a Balanced, Nutty Smoothie</h2>
+<p>Perfect For: Those who want a creamy but light smoothie base with subtle nuttiness.</p>
+<p>Pair With: Berries, banana, spinach, and a touch of almond butter. Almond milk's mild flavor lets other fruits shine, creating a balanced, smooth blend.</p>
+<p>Nutritional Benefits: Low calories and packed with vitamin E for glowing skin.</p>
+ <h2>Coconut Water: For a Hydrating, Refreshing Base</h2>
+ <p>Perfect For: Post-workout recovery and staying hydrated in hot weather.</p>
+<p>Pair With: Pineapple, mango, kiwi, and leafy greens. Coconut water’s slight sweetness complements tropical fruits and provides a light consistency.</p>
+<p>Nutritional Benefits: Contains electrolytes like potassium, making it an excellent option for rehydration.</p>
+<h2>Greek Yogurt: For a Protein-Packed, Creamy Base</h2>
+<p>Perfect For: Breakfast smoothies or as a post-workout snack.</p>
+<p>Pair With: Berries, bananas, honey, and oats for a filling and thick smoothie. The tangy taste of Greek yogurt adds a rich flavor that pairs well with sweet and tart fruits.</p>
+<p>Nutritional Benefits: High in protein and probiotics, Greek yogurt supports gut health and keeps you full longer.</p>
+<h2>Orange Juice: For a Bright, Tangy Burst of Flavor</h2>
+<p>Perfect For: An energy-boosting morning smoothie with a tropical twist.</p>
+<p>Pair With: Carrots, pineapple, mango, and ginger for a vibrant, refreshing mix. The citrus adds a tangy kick that complements fruits high in beta-carotene.</p>
+<p>Nutritional Benefits: Packed with vitamin C and antioxidants, orange juice gives your immune system a boost.</p>
+<h2>Oat Milk: For a Smooth and Naturally Sweet Base</h2>
+<p>Perfect For: A comforting, slightly sweet smoothie with a creamy texture.</p>
+<p>Pair With: Apples, cinnamon, bananas, and nutmeg for an oat-based “apple pie” smoothie. Oat milk's naturally sweet flavor is ideal for fall-inspired blends.</p>
+<p>Nutritional Benefits: Rich in fiber and iron, oat milk supports digestive health and can help keep energy levels stable.</p>
+<h2>Kefir: For a Tangy, Probiotic-Rich Base</h2>
+<p>Perfect For: Gut health and a little boost of tartness in your smoothie.</p>
+<p>Pair With: Strawberries, blueberries, honey, and chia seeds. Kefir’s unique tang adds depth and creaminess that complements sweeter fruits.</p>
+<p>Nutritional Benefits: Kefir is loaded with probiotics, calcium, and protein, supporting digestive health and immunity.</p>
+<h2> Green Tea or Matcha: For a Light, Energizing Base</h2>
+<p>Perfect For: Morning smoothies or an afternoon pick-me-up without added sugars.</p>
+<p>Pair With: Peaches, pineapples, spinach, and a dash of honey. The light flavor of green tea or matcha blends well with both tropical and green fruits.</p>
+<p>Nutritional Benefits: Green tea contains antioxidants and a gentle caffeine boost for natural energy.</p>
+<h2>Apple Juice: For a Crisp and Sweet Flavor</h2>
+<p>Perfect For: Those who prefer a lighter, sweeter smoothie with a refreshing taste.</p>
+<p>Pair With: Pears, celery, kale, and mint for a fresh, crisp smoothie with hints of fall flavors.</p>
+<p>Nutritional Benefits: Apples are high in fiber and antioxidants, making apple juice a naturally sweet and nutrient-rich choice.</p>
+
+<p>Choosing the right smoothie base can elevate your smoothie game, bringing out the best flavors and textures while tailoring it to your lifestyle needs. Mix and match these bases with different fruits and add-ons for endless combinations that suit your taste and goals.</p>
+
+<h3>Comments:</h3>
+<ul>
+    <% Blogs.comments.forEach(comment => { %>
+      <li><%= comment %></li>
+    <% }) %>
+</ul>
+
+<h3>Leave a Comment:</h3>
+<form action="/post/<%= Blogs.id %>/comment" method="POST">
+    <textarea name="comment" rows="4" cols="50" required></textarea><br>
+    <button type="submit">Submit</button>
+</form>
+
+<a href="/">Back to home</a>
+
+<%- include("partials/footer.ejs") %>

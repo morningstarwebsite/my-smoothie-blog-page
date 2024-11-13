@@ -1,0 +1,27 @@
+
+<%- include("partials/header.ejs") %>
+
+<main>
+<h1>Exploring Different Smoothie Bases: Milk, Juice, and Beyond
+</h1>
+<h2>where are my smoothie loves, I got you covered, today let's debate on smoothie bases </h2>
+
+<p>Smoothie bases are the liquids or semi-liquids used as the foundation of any smoothie recipe. They create the texture and consistency of a smoothie and help bring all the ingredients together, allowing for smooth blending. Beyond just milk and juice, smoothie bases can include options like yogurt, coconut water, nut milks, or even unique choices like herbal tea, pureed fruit, or coconut gel. Each base offers a distinct flavor, texture, and nutritional profile, letting you personalize smoothies to fit any taste or dietary need.</p>
+
+<div class="container">
+  <ul>
+    <% Blogs.forEach(post => { %>
+      <li>
+        <article>
+            <img class="smoothie" src="images/endless.png" alt="smoothie picture">
+          <h2><%= post.title %></h2>
+          <p><%= post.content.slice(0, 200) %></p>
+          <a href="<%= post.link %>">Read more</a>
+        </article>
+       </li>
+    <% }); %>
+  </ul>
+</div>
+</main>
+
+<%- include("partials/footer.ejs") %>

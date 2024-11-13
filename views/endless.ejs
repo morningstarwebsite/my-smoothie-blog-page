@@ -1,0 +1,36 @@
+<%- include("partials/header.ejs") %>
+<img class="profile" src="images/endless.png" alt="smoothie picture">
+<h1>One Base, Endless Smoothies: Experimenting with Milk-Based Smoothies</h1>
+
+<p>Milk-based smoothies are a classic go-to for smoothie lovers everywhere, offering creaminess, richness, and nutrition that set them apart. But did you know that by experimenting with different types of milk and ingredients, you can create endless variations of this delicious drink? From dairy options like whole milk and yogurt to plant-based choices such as almond and oat milk, there are countless ways to mix things up in your blender. Let’s dive into how different milk types and unique add-ins can help you whip up a fresh take on the milk-based smoothie every time.</p>
+
+<p>First up, we have the familiar, nutrient-rich option of dairy milk. Whether you choose whole, low-fat, or even lactose-free milk, dairy adds a creamy texture and boosts calcium and protein levels. Blending dairy milk with fruits like bananas, strawberries, or blueberries creates a satisfyingly thick and classic smoothie. For a morning boost, add a spoonful of peanut butter or a sprinkle of oats. With these additions, your smoothie is more than just a drink—it’s a filling meal with a balance of protein, fats, and carbohydrates.</p>
+
+<p>For those seeking a lighter and plant-based alternative, almond milk offers a nutty flavor that’s versatile and low in calories. This milk pairs well with tropical fruits like pineapple, mango, and coconut, bringing a vacation-inspired twist to your smoothie routine. Almond milk is also fantastic with antioxidant-packed ingredients like spinach, matcha, or chia seeds, creating a blend that’s both energizing and refreshing. Almond milk is particularly good for layering flavors, so don’t be afraid to experiment with spices like cinnamon or turmeric for an added health kick.</p>
+
+<p>Oat milk, which has grown in popularity for its creamy consistency and subtle sweetness, is a wonderful addition to any smoothie. It blends effortlessly with fruits like apples, peaches, or pears, making it an ideal choice for fall-inspired flavors. Add a dash of cinnamon, nutmeg, or even a splash of vanilla for an extra cozy feel. Oat milk’s mild flavor allows you to showcase the natural sweetness of the fruit, making it great for anyone who prefers a lower-sugar, naturally sweetened smoothie. And as an added bonus, oat milk’s high fiber content can help you feel fuller for longer.</p>
+
+<p>For those who crave something truly indulgent yet plant-based, coconut milk brings an irresistible tropical richness to the table. Its thick, creamy texture works wonders with bananas, cocoa, and dates, creating a dessert-like smoothie that’s rich in flavor. Coconut milk is perfect for making smoothie bowls topped with fruits, nuts, and seeds. You can also add a touch of espresso or cacao for a coffee-shop-inspired treat. Because coconut milk is thicker than most plant-based milks, it adds a luxurious feel to smoothies, turning them into satisfying, decadent drinks.</p>
+
+<p>Cashew milk, known for its velvety texture, is another plant-based milk that offers versatility in the smoothie world. It’s naturally sweet, which makes it perfect for pairing with both fruity and savory ingredients. Try blending it with strawberries and basil for a refreshing twist, or add avocado and cucumber for a creamy, nutrient-packed green smoothie. Cashew milk’s subtle flavor makes it an excellent base for experimenting with herbs and spices, opening up endless possibilities.</p>
+
+<p>Finally, yogurt-based smoothies deserve a spotlight of their own. Yogurt—especially Greek yogurt—provides a thick, tangy base that’s packed with probiotics, protein, and calcium. Its tartness pairs beautifully with both sweet and savory flavors, creating a balanced smoothie that’s perfect for breakfast or a mid-day snack. Blend yogurt with berries, honey, and granola for a parfait-like drink, or mix it with cucumber, mint, and a pinch of salt for a refreshing take on a lassi-inspired smoothie. The richness of yogurt also makes it an ideal base for veggie-heavy smoothies, as its tanginess balances out the earthiness of greens.</p>
+
+<p>Experimenting with different milk bases allows you to unlock new flavors, textures, and nutritional benefits in your smoothies. From the familiar creaminess of dairy milk to the nutty richness of almond and the tropical allure of coconut, each type of milk brings its own unique character to your smoothie creations. By pairing these bases with fruits, veggies, spices, and other add-ins, you’ll discover that the possibilities are truly endless. So grab your blender, pour in your choice of milk, and let your creativity take over.</p>
+
+<h3>Comments:</h3>
+<ul>
+    <% Blogs.comments.forEach(comment => { %>
+      <li><%= comment %></li>
+    <% }) %>
+</ul>
+
+<h3>Leave a Comment:</h3>
+<form action="/post/<%= Blogs.id %>/comment" method="POST">
+    <textarea name="comment" rows="4" cols="50" required></textarea><br>
+    <button type="submit">Submit</button>
+</form>
+
+<a href="/">Back to home</a>
+
+<%- include("partials/footer.ejs") %>

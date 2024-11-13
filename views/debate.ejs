@@ -1,0 +1,58 @@
+<%- include("partials/header.ejs") %>
+<img class="profile" src="images/debate.png" alt="smoothie picture">
+<h1>The Great Smoothie Debate: Milk, Juice, or Something New?</h1>
+<p>When it comes to making the perfect smoothie, the base you choose sets the tone for flavor, texture, and nutritional benefits. Whether you’re a fan of creamy milk-based blends, prefer the lightness of juice, or are ready to try something a bit more unique, here’s a breakdown of which base might be the right match for your next smoothie.</p>
+
+<h2> Milk: Creamy and Nutrient-Packed</h2>
+<ul>
+    <li>Best For: Rich, dessert-like smoothies that are high in protein.</li>
+    <li>Why Choose It: Milk’s creamy consistency creates thick smoothies that feel indulgent. It pairs especially well with bananas, berries, and cacao for smoothie recipes that satisfy as a meal or snack.</li>
+    <li>Nutritional Highlights: Cow’s milk provides protein, calcium, and vitamin D, while plant-based milks like almond and oat add a subtle flavor without added dairy.</li>
+    <li>Popular Pairings: Almond milk with strawberries and spinach; coconut milk with mango and pineapple.</li>
+</ul>
+<h2> Juice: Bright and Refreshing</h2> 
+<ul>
+    <li>Best For: Fruity, hydrating smoothies with a light consistency.</li>
+    <li>Why Choose It: Juice-based smoothies taste vibrant and refreshing, making them perfect for a morning wake-up or post-workout hydration. Orange, apple, and pineapple juice add natural sweetness, while veggie juices like carrot and beet give earthy depth.</li>
+    <li>Nutritional Highlights: Fresh juices provide quick hydration and a dose of vitamins like C and A, though they may be higher in natural sugars.</li>
+    <li>Popular Pairings: Orange juice with pineapple and ginger; apple juice with cucumber and kale.</li>
+</ul>
+<h2>Kefir or Greek Yogurt: Tangy and Probiotic-Rich</h2> 
+<ul>
+    <li>Best For: Thick, creamy smoothies that support gut health.</li>
+    <li>Why Choose It: These probiotic-rich bases add a pleasant tang that complements both sweet and savory ingredients. They’re perfect for smoothies that double as breakfast or a filling snack.</li>
+    <li>Nutritional Highlights: Kefir and Greek yogurt are high in protein and packed with probiotics, which support digestion and immune health.</li>
+    <li>Popular Pairings: Greek yogurt with blueberries and honey; kefir with strawberries and chia seeds.</li>
+</ul>
+<h2>Coconut Water: Hydrating and Low-Calorie</h2> 
+<ul>
+    <li>Best For: Light and tropical smoothies that help with hydration.</li>
+    <li>Why Choose It: Coconut water’s slight natural sweetness and electrolyte content make it ideal for rehydrating after exercise or in hot weather. It’s light and refreshing, letting tropical fruits shine.</li>
+    <li>Nutritional Highlights: Contains potassium, magnesium, and other electrolytes with minimal calories.</li>
+    <li>Popular Pairings: Coconut water with pineapple and mango; or kiwi and spinach for a tropical twist.</li>
+</ul>
+<h2>Green Tea or Matcha: Energizing and Antioxidant-Rich</h2> 
+<ul>
+    <li>Best For: A light, earthy smoothie with a hint of caffeine.</li>
+    <li>Why Choose It: Green tea or matcha adds a gentle caffeine boost and an earthy undertone that’s perfect for balancing sweet fruits. These bases are great for anyone seeking a lower-sugar option with natural energy.</li>
+    <li>Nutritional Highlights: High in antioxidants, green tea and matcha support metabolism and provide a steady source of energy.</li>
+    <li>Popular Pairings: Matcha with peaches and bananas; green tea with apples and mint.</li>
+</ul>
+<p>Choosing between milk, juice, and new alternatives depends on your personal tastes, dietary needs, and the type of smoothie experience you’re after. Try experimenting with each of these bases to discover the perfect blend for your mood, and enjoy the endless possibilities of smoothie-making!</p>
+
+<h3>Comments:</h3>
+<ul>
+    <% Blogs.comments.forEach(comment => { %>
+      <li><%= comment %></li>
+    <% }) %>
+</ul>
+
+<h3>Leave a Comment:</h3>
+<form action="/post/<%= Blogs.id %>/comment" method="POST">
+    <textarea name="comment" rows="4" cols="50" required></textarea><br>
+    <button type="submit">Submit</button>
+</form>
+
+<a href="/">Back to home</a>
+
+<%- include("partials/footer.ejs") %>

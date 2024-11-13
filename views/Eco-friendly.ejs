@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+<img class="profile" src="images/eco-friendly.png" alt="smoothie picture">
+<h1>Eco-Friendly Smoothie Bases You Can Make at Home</h1>
+<p>In the world of smoothie-making, the base is where it all begins. Beyond the classic milk or juice, choosing an eco-friendly base for your smoothies not only opens up a world of flavors but also supports sustainable habits that can help reduce waste. Many traditional bases come in single-use containers, are heavily processed, or contain additives. By creating your own bases from natural, everyday ingredients, you’re not only cutting down on waste but also enriching your smoothies with unique flavors and nutrients.</p>
+<p>One of the most popular eco-friendly bases to try is homemade nut and seed milk. Almond, oat, and hemp milk are all easy to make, and the process is simple. Soak a cup of nuts or seeds overnight, drain, blend with fresh water, and strain if desired. This base provides a creamy, plant-based option that pairs well with everything from berries and bananas to spinach and chia seeds. Since you avoid purchasing cartons of nut milk, you cut down on packaging waste and get a fresh, natural taste in every sip.</p>
+<p>Another interesting base that reduces food waste is fruit or veggie water. Infuse water with fresh slices of pineapple or cucumber, strain, and use the flavored water as a smoothie base. This approach gives your smoothie a light, refreshing twist while repurposing fruit that might otherwise go unused. For a tropical smoothie, blend this base with mango, papaya, or banana, and enjoy the subtle fruit undertones without added sugar or preservatives.</p>
+<p>Herbal tea infusions such as mint, ginger, or chamomile tea can be a delightful base as well. Brew a strong tea and allow it to cool before blending with your favorite fruits. The herbal notes bring a soothing, aromatic quality to smoothies, perfect for pairing with apple, peach, or pineapple. This option also eliminates the need for single-use plastic bottles, especially if you grow the herbs yourself. Using tea in smoothies is a unique way to expand your flavor profile while maintaining a natural, eco-conscious approach.</p>
+<p>If you have access to fresh coconuts, consider making your own coconut water by blending coconut pulp with water and straining the mixture. This approach avoids the plastic packaging associated with store-bought coconut water while using the whole coconut. The result is a natural electrolyte boost ideal for tropical smoothies with mango, pineapple, or kiwi. The taste is fresher and more authentic than bottled coconut water, with the added benefit of minimizing plastic waste.</p>
+<p>A less conventional, yet highly sustainable option is to use leftover rice or quinoa water. After cooking or rinsing rice or quinoa, save the water and chill it to use as a smoothie base. This slightly sweet, nutrient-rich liquid adds an unexpected twist to smoothies while reducing food waste. Pair it with berries, bananas, and a touch of vanilla for a creamy, balanced smoothie that feels both filling and nutritious.</p>
+<p>For those looking to add extra fiber and thickness to their smoothies, flax and chia gel water makes an excellent base. Mix a tablespoon of flax or chia seeds with a cup of water and let it sit for about 20 minutes until it thickens. The gel-like consistency adds body to smoothies, and flax or chia seeds are often available in bulk, allowing you to avoid wasteful packaging. This base is ideal for thicker smoothies with banana, blueberry, and leafy greens, creating a fiber-rich blend that supports digestion and fullness.</p>
+<p>Switching to eco-friendly smoothie bases not only saves on packaging waste but also supports a more mindful and sustainable lifestyle. By rethinking the foundations of your smoothie and experimenting with homemade bases, you can reduce waste and rediscover the taste of pure, natural ingredients. Whether you’re opting for a creamy nut milk, a refreshing cucumber infusion, or a soothing herbal tea, eco-friendly smoothie bases add a new layer of creativity and responsibility to your daily routine.</p>
+
+<h3>Comments:</h3>
+<ul>
+    <% Blogs.comments.forEach(comment => { %>
+      <li><%= comment %></li>
+    <% }) %>
+</ul>
+
+<h3>Leave a Comment:</h3>
+<form action="/post/<%= Blogs.id %>/comment" method="POST">
+    <textarea name="comment" rows="4" cols="50" required></textarea><br>
+    <button type="submit">Submit</button>
+</form>
+
+<a href="/">Back to home</a>
+
+<%- include("partials/footer.ejs") %>

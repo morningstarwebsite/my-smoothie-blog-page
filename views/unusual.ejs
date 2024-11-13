@@ -1,0 +1,66 @@
+<%- include("partials/header.ejs") %>
+<img class="profile" src="images/unusual.png" alt="smoothie picture">
+<h1> Tea to Tofu: The Most Unusual Smoothie Bases You’ve Never Thought Of</h1>
+<p>If you're ready to move beyond the basics and truly experiment with your smoothie recipes, try incorporating some of these unconventional bases. Each one brings its own unique flavor, texture, and nutritional benefits, turning an ordinary smoothie into something extraordinary.</p>
+
+<h2>Green Tea: Energizing and Antioxidant-Packed</h2>
+<ul>
+    <li>What It Adds: Green tea provides a gentle caffeine boost and a subtle, earthy flavor. It’s a fantastic option for morning smoothies when you’re looking to start your day with a bit of energy.</li>
+    <li>Nutritional Highlights: High in antioxidants, particularly catechins, which support metabolism and heart health.</li>
+    <li>Perfect Pairings: Blend with pineapple, mint, and banana for a refreshing, low-caffeine kick.</li>
+</ul>
+<h2>Tofu: Creamy and Protein-Rich</h2>
+<ul>
+    <li>What It Adds: Tofu adds a silky creaminess that’s similar to yogurt but without dairy. It’s flavor-neutral, letting your other ingredients shine, and provides a protein boost.</li>
+    <li>Nutritional Highlights: Packed with plant-based protein, iron, and calcium, making it great for post-workout recovery.</li>
+    <li>Perfect Pairings: Try tofu with mixed berries, vanilla, and a touch of honey for a smoothie that’s both indulgent and nourishing.</li>
+</ul>
+<h2>Herbal Teas: Naturally Flavorful and Caffeine-Free</h2>
+<ul>
+    <li>What It Adds: Herbal teas like hibiscus, chamomile, or ginger add a hint of floral or spicy undertones, ideal for pairing with fruits without overwhelming them.</li>
+    <li>Nutritional Highlights: Low in calories and packed with antioxidants, herbal teas are a great option for evening or caffeine-free smoothies.</li>
+    <li>Perfect Pairings: Hibiscus tea with watermelon and lime; chamomile with peaches and a sprinkle of cinnamon.</li>
+</ul>
+<h2>Kombucha: Fizzy and Probiotic-Rich</h2>
+<ul>
+    <li>What It Adds: Kombucha brings a fizzy twist to your smoothie, along with a tart, tangy flavor that adds depth.</li>
+    <li>Nutritional Highlights: Full of probiotics that support gut health, making it a great choice if you’re looking for a digestive-friendly drink.</li>
+    <li>Perfect Pairings: Combine kombucha with strawberries and mango for a tropical, slightly tangy smoothie.</li>
+</ul>
+<h2>Cold Brew Coffee: Bold and Smooth</h2>
+<ul>
+    <li>What It Adds: Cold brew coffee is perfect for coffee lovers who want to infuse their smoothie with a rich, bold flavor and an extra caffeine boost.</li>
+    <li>Nutritional Highlights: Contains antioxidants and natural caffeine for a lasting energy boost without the acidity of regular coffee.</li>
+    <li>Perfect Pairings: Blend with bananas, almond butter, and cocoa powder for a smoothie that doubles as breakfast and dessert.</li>
+</ul>
+<h2>Aloe Vera Juice: Light and Hydrating</h2>
+<ul>
+    <li>What It Adds: Aloe vera juice has a light, subtle flavor that complements tropical and citrus fruits. Known for its cooling properties, it’s a great option for a refreshing, hydrating smoothie.</li>
+    <li>Nutritional Highlights: Known for its hydration properties and benefits to skin health, aloe vera is low-calorie and cooling.</li>
+    <li>Perfect Pairings: Mix with pineapple, cucumber, and a squeeze of lime for a revitalizing, summer-inspired blend.</li>
+</ul>
+<h2>Oat Milk: Heart-Healthy and Creamy</h2>
+<ul>
+    <li>What It Adds: Oat milk has a naturally creamy texture and slightly sweet taste, which makes it an excellent choice for smoothie lovers seeking a dairy-free option.</li>
+    <li>Nutritional Highlights: Oats are high in fiber, making oat milk a great base for a satisfying smoothie with added heart health benefits.</li>
+    <li>Perfect Pairings: Try oat milk with apples, cinnamon, and a spoonful of peanut butter for a fall-inspired treat.</li>
+</ul>
+<h2>Embrace the Unexpected</h2>
+<p>Experimenting with these unusual smoothie bases opens up endless possibilities for unique flavor combinations, added nutrients, and exciting textures. So next time you blend up a smoothie, why not go beyond the usual milk or juice?</p>
+
+<h3>Comments:</h3>
+<ul>
+    <% Blogs.comments.forEach(comment => { %>
+      <li><%= comment %></li>
+    <% }) %>
+</ul>
+
+<h3>Leave a Comment:</h3>
+<form action="/post/<%= Blogs.id %>/comment" method="POST">
+    <textarea name="comment" rows="4" cols="50" required></textarea><br>
+    <button type="submit">Submit</button>
+</form>
+
+<a href="/">Back to home</a>
+
+<%- include("partials/footer.ejs") %>
